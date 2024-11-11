@@ -1,27 +1,33 @@
-namespace Models;
+using Models;
 
-abstract class Pelicula{
+class Pelicula : Categoria{
 
+    public int Id_Pelicula{get; set;}
     public string Nombre {get; set;}
     public string Descripcion {get; set;}    
     public string Actores {get; set;}
     public string Directores {get; set;}
     public string Duracion {get; set;}
     public double Precio {get; set;}
+    public int Id_Categoria {get; set;}
 
 
-    public Pelicula(string nombre, string descripcion, string actores, string directores, string duracion, double precio){
+    public Pelicula(int id_pelicula, string nombre, string descripcion, string actores, string directores, string duracion, double precio, int id_categoria, string nombre_categoria): base(id_categoria, nombre_categoria){
 
+        Id_Pelicula = id_pelicula;
         Nombre = nombre;
         Descripcion = descripcion;
         Actores = actores;
         Directores = directores;
         Duracion = duracion;
         Precio = precio;
+        Id_Categoria = id_categoria;
 
     }
 
-    public abstract void MostrarDetalles();
+    public override void MostrarDetalles(){
+
+    }
 
 
 }
