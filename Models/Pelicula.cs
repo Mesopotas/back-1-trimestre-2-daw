@@ -1,6 +1,6 @@
-using Models;
+namespace Models;
 
-class Pelicula : Categoria{
+public class Pelicula : Categoria{
 
     public int Id_Pelicula{get; set;}
     public string Nombre {get; set;}
@@ -9,7 +9,6 @@ class Pelicula : Categoria{
     public string Directores {get; set;}
     public string Duracion {get; set;}
     public double Precio {get; set;}
-    public int Id_Categoria {get; set;}
 
 
     public Pelicula(int id_pelicula, string nombre, string descripcion, string actores, string directores, string duracion, double precio, int id_categoria, string nombre_categoria): base(id_categoria, nombre_categoria){
@@ -21,7 +20,6 @@ class Pelicula : Categoria{
         Directores = directores;
         Duracion = duracion;
         Precio = precio;
-        Id_Categoria = id_categoria;
 
     }
 
