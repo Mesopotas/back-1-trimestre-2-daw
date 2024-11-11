@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\back-1-trimestre-2-daw.props" />
+</Project>
