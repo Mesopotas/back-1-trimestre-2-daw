@@ -12,4 +12,7 @@ public abstract class Categoria{
 
     public abstract void MostrarDetalles(); 
 
+
+    
+
 }

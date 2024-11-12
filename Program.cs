@@ -1,3 +1,5 @@
+using Models;
+/*
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,13 +26,16 @@ app.MapControllers();
 
 app.Run();
 
-
+*/
 
 
 //////////////////////////////////////////////////////
 
 
+//Para crear una nueva pelicua, necesitaras, su Id(int), su Nombre, su descripcion, los actores, Directores, Duracion(double), Precio(doble), Id_categoria(int), Nombre_categoria
 
+var pelicula = new Pelicula(1, "Terrifier", "muymucho miedo", "y0", "yo", 2.1, 7.5, 1,"Miedo");
 
+pelicula.MostrarDetalles();
 
 
