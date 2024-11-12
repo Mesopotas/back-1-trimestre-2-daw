@@ -9,9 +9,10 @@ public class Pelicula : Categoria{
     public string Directores {get; set;}
     public double Duracion {get; set;}
     public double Precio {get; set;}
+    public bool ParaMayoresEdad {get; set;}
 
 
-    public Pelicula(int id_pelicula, string nombre, string descripcion, string actores, string directores, double duracion, double precio, int id_categoria, string nombre_categoria): base(id_categoria, nombre_categoria){
+    public Pelicula(int id_pelicula, string nombre, string descripcion, string actores, string directores, double duracion, double precio,bool paramayoresedad, int id_categoria, string nombre_categoria): base(id_categoria, nombre_categoria){
 
         Id_Pelicula = id_pelicula;
         Nombre = nombre;
@@ -20,12 +21,15 @@ public class Pelicula : Categoria{
         Directores = directores;
         Duracion = duracion;
         Precio = precio;
+        ParaMayoresEdad = paramayoresedad;
 
     }
 
     public override void MostrarDetalles(){
 
-        Console.WriteLine($"Id_Pelicula: {Id_Pelicula}, Nombre: {Nombre}, Descripcion: {Descripcion}, Actores: {Actores}, Directores: {Directores}, Duracion: {Duracion},Precio: {Precio},Id_Categoria: {Id_Categoria},Nombre_Categoria: {Nombre_Categoria}");
+        string tipoParaMayoresEdad = ParaMayoresEdad ? "Si" : "No";
+
+        Console.WriteLine($"Id_Pelicula: {Id_Pelicula}, Nombre: {Nombre}, Descripcion: {Descripcion}, Actores: {Actores}, Directores: {Directores}, Duracion: {Duracion},Precio: {Precio},Solo mayores de edad: {tipoParaMayoresEdad},Id_Categoria: {Id_Categoria},Nombre_Categoria: {Nombre_Categoria}");
 
     }
 
