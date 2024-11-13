@@ -1,6 +1,6 @@
 namespace Models;
 
-public abstract class Categoria{
+public class Categoria{
 
     public int Id_Categoria {get; set;}
     public string Nombre_Categoria {get; set;}
@@ -10,7 +10,6 @@ public abstract class Categoria{
         Nombre_Categoria = nombre_categoria;
     }
 
-    public abstract void MostrarDetalles(); 
 
 
     

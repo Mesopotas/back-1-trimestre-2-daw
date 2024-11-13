@@ -25,7 +25,7 @@ public class Pelicula : Categoria{
 
     }
 
-    public override void MostrarDetalles(){
+    public void MostrarDetalles(){
 
         string tipoParaMayoresEdad = ParaMayoresEdad ? "Si" : "No";
 
