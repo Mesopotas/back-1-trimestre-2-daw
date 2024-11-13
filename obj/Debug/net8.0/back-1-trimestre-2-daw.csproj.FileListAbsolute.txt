@@ -30,3 +30,4 @@ C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\refint\back-1-trimestre-2-da
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.pdb
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.genruntimeconfig.cache
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\ref\back-1-trimestre-2-daw.dll
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.sourcelink.json
