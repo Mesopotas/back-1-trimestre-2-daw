@@ -11,7 +11,7 @@ class Pedido {
     public void AñadirProducto(Pelicula pelicula){
 
         peliculas.Add(pelicula);
-        Console.WriteLine($"Pelicula Añadida: {pelicula}");
+        Console.WriteLine($"Pelicula Añadida: {pelicula.Nombre}");
 
     }
 
