@@ -1,6 +1,6 @@
 namespace Models;
 
-public class Pelicula : Categoria{
+public class Pelicula{
 
     public int Id_Pelicula{get; set;}
     public string Nombre {get; set;}
@@ -10,9 +10,11 @@ public class Pelicula : Categoria{
     public double Duracion {get; set;}
     public double Precio {get; set;}
     public bool ParaMayoresEdad {get; set;}
+    public int Id_Categoria {get;set;}
+    public string Nombre_Categoria {get; set;}
 
 
-    public Pelicula(int id_pelicula, string nombre, string descripcion, string actores, string directores, double duracion, double precio,bool paramayoresedad, int id_categoria, string nombre_categoria): base(id_categoria, nombre_categoria){
+    public Pelicula(int id_pelicula, string nombre, string descripcion, string actores, string directores, double duracion, double precio,bool paramayoresedad, int id_categoria, string nombre_categoria){
 
         Id_Pelicula = id_pelicula;
         Nombre = nombre;
@@ -22,6 +24,8 @@ public class Pelicula : Categoria{
         Duracion = duracion;
         Precio = precio;
         ParaMayoresEdad = paramayoresedad;
+        Id_Categoria = id_categoria;
+        Nombre_Categoria = nombre_categoria;
 
     }
 
