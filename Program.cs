@@ -31,10 +31,10 @@ app.Run();
 
 //////////////////////////////////////////////////////
 
+/*
+Para crear una nueva pelicua, necesitaras, su Id(int), su Nombre, su descripcion, los actores, Directores, Duracion(double), Precio(doble), ParaMayoresEdad(bool(o false para o no, o true para si)), Id_categoria(int), Nombre_categoria
 
-//Para crear una nueva pelicua, necesitaras, su Id(int), su Nombre, su descripcion, los actores, Directores, Duracion(double), Precio(doble), ParaMayoresEdad(bool(o false para o no, o true para si)), Id_categoria(int), Nombre_categoria
-
-var pelicula = new Pelicula(1, "Terrifier", "muymucho miedo", "Leonardo DiCaprio y Selena Gomez", "Nicolas Abuin", 2.1, 7.5, false, 1,"Miedo");
+var pelicula = new Pelicula(1, "Terrifier", "muymucho miedo", "Leonardo DiCaprio y Selena Gomez", "Nicolas Abuin", 2.1, 7.5, false,"Miedo");
 
 pelicula.MostrarDetalles();
 
@@ -48,3 +48,4 @@ pedido.MostrarDetalles();
 var total = pedido.CalcularTotal();
 
 Console.WriteLine($"El total es: {total}");
+*/
