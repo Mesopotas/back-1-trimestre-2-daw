@@ -41,6 +41,7 @@ namespace back_1_trimestre_2_daw.Controllers
             return Ok(peliculasCategoria);
         }
 
+
         
         private static void InicializarPeliculas()
         { 
@@ -66,6 +67,13 @@ namespace back_1_trimestre_2_daw.Controllers
             peliculas.Add(new Pelicula(20, "Star Wars: Episodio IV", "Un joven granjero se une a un caballero Jedi, un contrabandista y una princesa para luchar contra un malvado imperio galáctico.", "Mark Hamill, Harrison Ford y Carrie Fisher", "George Lucas", 2.01, 4.50, false, 3, "Ciencia ficción"));
 
         }
+
+        
+        public static List<Pelicula> GetPeliculas()
+        {
+            return peliculas;
+        }
+        
     }
 }
 
