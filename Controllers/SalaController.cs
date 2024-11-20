@@ -42,6 +42,8 @@ namespace back_1_trimestre_2_daw.Controllers
             return Ok(sala.Asientos);
         }
 
+
+
         [HttpPost]
         public ActionResult<Sala> Create([FromBody] Sala nuevaSala)
         {
@@ -69,6 +71,11 @@ namespace back_1_trimestre_2_daw.Controllers
                 asientos.Add(new Asiento(i, false)); // Todos los asientos no están reservados inicialmente
             }
             return asientos;
+        }
+
+                public static List<Sala> GetSalas()
+        {
+            return salas;
         }
     }
 }

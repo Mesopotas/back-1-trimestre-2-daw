@@ -41,6 +41,7 @@ namespace back_1_trimestre_2_daw.Controllers
             return Ok(peliculasCategoria);
         }
 
+
         
         private static void InicializarPeliculas()
         { 
@@ -66,93 +67,13 @@ namespace back_1_trimestre_2_daw.Controllers
             peliculas.Add(new Pelicula(20, "Star Wars: Episodio IV", "Un joven granjero se une a un caballero Jedi, un contrabandista y una princesa para luchar contra un malvado imperio galáctico.", "Mark Hamill, Harrison Ford y Carrie Fisher", "George Lucas", 2.01, 4.50, false, 3, "Ciencia ficción"));
 
         }
+
+        
+        public static List<Pelicula> GetPeliculas()
+        {
+            return peliculas;
+        }
+
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-        /*
-
-        [HttpPost]
-        public ActionResult<Pelicula> Create([FromBody] Pelicula pelicula)
-        {
-            pelicula.Id_Pelicula = peliculas.Count > 0 ? peliculas.Max(p => p.Id_Pelicula) + 1 : 1;
-            peliculas.Add(pelicula);
-            return CreatedAtAction(nameof(GetById), new { id = pelicula.Id_Pelicula }, pelicula);
-        }
-
-        [HttpPut("{id}")]
-        public ActionResult Update(int id, [FromBody] Pelicula updatedPelicula)
-        {
-            var pelicula = peliculas.FirstOrDefault(p => p.Id_Pelicula == id);
-            if (pelicula == null)
-                return NotFound();
-
-            pelicula.Nombre = updatedPelicula.Nombre;
-            pelicula.Descripcion = updatedPelicula.Descripcion;
-            pelicula.Actores = updatedPelicula.Actores;
-            pelicula.Directores = updatedPelicula.Directores;
-            pelicula.Duracion = updatedPelicula.Duracion;
-            pelicula.Precio = updatedPelicula.Precio;
-            pelicula.ParaMayoresEdad = updatedPelicula.ParaMayoresEdad;
-            pelicula.Id_Categoria = updatedPelicula.Id_Categoria;
-            pelicula.Nombre_Categoria = updatedPelicula.Nombre_Categoria;
-
-            return NoContent();
-        }
-
-
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
-        {
-            var pelicula = peliculas.FirstOrDefault(p => p.Id_Pelicula == id);
-            if (pelicula == null)
-                return NotFound();
-
-            peliculas.Remove(pelicula);
-            return NoContent();
-        }
-
-
-
-        [HttpGet("sesiones")]
-        public ActionResult<IEnumerable<Sesion>> GetSesiones()
-        {
-            return Ok(sesiones);
-        }
-
-        [HttpPost("sesiones")]
-        public ActionResult<Sesion> CreateSesion([FromBody] Sesion nuevaSesion)
-        {
-            nuevaSesion.Id = sesiones.Count > 0 ? sesiones.Max(s => s.Id) + 1 : 1;
-            sesiones.Add(nuevaSesion);
-            return CreatedAtAction(nameof(GetSesiones), new { id = nuevaSesion.Id }, nuevaSesion);
-        }
-        
-
-            // Crear salas
-            salas.Add(new Sala(1, "Sala 1", 100));
-            salas.Add(new Sala(2, "Sala 2", 120));
-            salas.Add(new Sala(3, "Sala 3", 111));
-            salas.Add(new Sala(4, "Sala 4", 122));
-            salas.Add(new Sala(5, "Sala 5", 10));
-            salas.Add(new Sala(6, "Sala 8", 12));
-            
-
-            // Crear sesiones
-            sesiones.Add(new Sesion(1,peliculas[0], salas[0]));
-            sesiones.Add(new Sesion(2,peliculas[1], salas[1]));
-            sesiones.Add(new Sesion(3,peliculas[2], salas[2]));
-
-*/  
-
 
