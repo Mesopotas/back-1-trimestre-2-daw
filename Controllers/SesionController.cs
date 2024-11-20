@@ -13,12 +13,12 @@ namespace back_1_trimestre_2_daw.Controllers
     {
         if (PeliculaController.GetPeliculas().Count == 0)
         {
-            new PeliculaController(); // Inicializa películas si no están inicializadas
+            new PeliculaController();
         }
 
         if (SalaController.GetSalas().Count == 0)
         {
-            new SalaController(); // Inicializa salas si no están inicializadas
+            new SalaController();
         }
 
         if (sesiones.Count == 0)
@@ -43,9 +43,27 @@ namespace back_1_trimestre_2_daw.Controllers
             return Ok(sesion);
         }
 
+        [HttpGet("pelicula/{idPelicula}/salas")]
+        public ActionResult<IEnumerable<Sala>> GetSalasByPelicula(int idPelicula)
+        {
+            // Filtrar las sesiones por el ID de la película
+            var salas = sesiones
+                .Where(s => s.Pelicula.Id_Pelicula == idPelicula)
+                .Select(s => s.Sala)
+                .Distinct()
+                .ToList();
+
+            if (!salas.Any())
+            {
+                return NotFound($"No se encontraron salas para la película con ID {idPelicula}.");
+            }
+
+            return Ok(salas);
+        }
+
         private static void InicializarSesiones()
         {
-            // Obtener datos inicializados desde PeliculaController y SalaController
+
             var peliculas = PeliculaController.GetPeliculas();
             var salas = SalaController.GetSalas();
 
