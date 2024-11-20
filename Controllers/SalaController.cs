@@ -45,7 +45,7 @@ namespace back_1_trimestre_2_daw.Controllers
         [HttpPost]
         public ActionResult<Sala> Create([FromBody] Sala nuevaSala)
         {
-            nuevaSala.Id = salas.Count > 0 ? salas.Max(s => s.Id) + 1;
+            nuevaSala.Id = salas.Count > 0 ? salas.Max(s => s.Id) + 1 : 1;
             nuevaSala.Asientos = InicializarAsientos(nuevaSala.Capacidad);
             salas.Add(nuevaSala);
             return CreatedAtAction(nameof(GetById), new { id = nuevaSala.Id }, nuevaSala);
