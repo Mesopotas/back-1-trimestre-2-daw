@@ -9,24 +9,28 @@ namespace back_1_trimestre_2_daw.Controllers
     {
         private static List<Sesion> sesiones = new List<Sesion>();
 
-    public SesionController()
-    {
-        if (PeliculaController.GetPeliculas().Count == 0)
+        public SesionController()
         {
-            new PeliculaController();
-        }
+            if (PeliculaController.GetPeliculas().Count == 0)
+            {
+                new PeliculaController();
+            }
 
-        if (SalaController.GetSalas().Count == 0)
-        {
-            new SalaController();
-        }
+            if (SalaController.GetSalas().Count == 0)
+            {
+                new SalaController();
+            }
 
-        if (sesiones.Count == 0)
-        {
-            InicializarSesiones();
-        }
-    }
+            if (HorarioController.GetHorarios().Count == 0)
+            {
+                new HorarioController();
+            }
 
+            if (sesiones.Count == 0)
+            {
+                InicializarSesiones();
+            }
+        }
 
         [HttpGet]
         public ActionResult<IEnumerable<Sesion>> GetAll()
@@ -46,7 +50,6 @@ namespace back_1_trimestre_2_daw.Controllers
         [HttpGet("pelicula/{idPelicula}/salas")]
         public ActionResult<IEnumerable<Sala>> GetSalasByPelicula(int idPelicula)
         {
-            // Filtrar las sesiones por el ID de la película
             var salas = sesiones
                 .Where(s => s.Pelicula.Id_Pelicula == idPelicula)
                 .Select(s => s.Sala)
@@ -63,16 +66,16 @@ namespace back_1_trimestre_2_daw.Controllers
 
         private static void InicializarSesiones()
         {
-
             var peliculas = PeliculaController.GetPeliculas();
             var salas = SalaController.GetSalas();
+            var horarios = HorarioController.GetHorarios();
 
-            // Asociar películas con salas para crear sesiones
-            if (peliculas.Count > 0 && salas.Count > 0)
+            // Asociar películas, salas y horarios para crear sesiones
+            if (peliculas.Count > 0 && salas.Count > 0 && horarios.Count > 0)
             {
-                sesiones.Add(new Sesion(1, peliculas[1], salas[0]));
-                sesiones.Add(new Sesion(2, peliculas[2], salas[1]));
-                sesiones.Add(new Sesion(3, peliculas[3], salas[2]));
+                sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[0])); // Película 1, Sala 1, Horario 1
+                sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[1])); // Película 2, Sala 2, Horario 2
+                sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[2])); // Película 3, Sala 3, Horario 3
             }
         }
     }
