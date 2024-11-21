@@ -33,7 +33,7 @@ public class Pelicula{
 
         string tipoParaMayoresEdad = ParaMayoresEdad ? "Si" : "No";
 
-        Console.WriteLine($"Id_Pelicula: {Id_Pelicula}, Nombre: {Nombre}, Descripcion: {Descripcion}, Actores: {Actores}, Directores: {Directores}, Duracion: {Duracion},Precio: {Precio},Solo mayores de edad: {tipoParaMayoresEdad},Id_Categoria: {Id_Categoria},Nombre_Categoria: {Nombre_Categoria}");
+        Console.WriteLine($"Id_Pelicula: {Id_Pelicula}, Nombre: {Nombre}, Descripcion: {Descripcion}, Actores: {Actores}, Directores: {Directores}, Duracion: {Duracion},Precio: {Precio:C},Solo mayores de edad: {tipoParaMayoresEdad},Id_Categoria: {Id_Categoria},Nombre_Categoria: {Nombre_Categoria}");
 
     }
 

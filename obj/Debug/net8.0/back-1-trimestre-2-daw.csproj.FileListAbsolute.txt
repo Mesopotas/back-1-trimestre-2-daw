@@ -1,3 +1,11 @@
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.csproj.AssemblyReference.cache
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.AssemblyInfoInputs.cache
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.AssemblyInfo.cs
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.csproj.CoreCompileInputs.cache
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.MvcApplicationPartsAssemblyInfo.cache
+C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.sourcelink.json
 C:\Proyects\back-1-trimestre-2-daw\bin\Debug\net8.0\appsettings.Development.json
 C:\Proyects\back-1-trimestre-2-daw\bin\Debug\net8.0\appsettings.json
 C:\Proyects\back-1-trimestre-2-daw\bin\Debug\net8.0\back-1-trimestre-2-daw.exe
@@ -9,13 +17,6 @@ C:\Proyects\back-1-trimestre-2-daw\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Proyects\back-1-trimestre-2-daw\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Proyects\back-1-trimestre-2-daw\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Proyects\back-1-trimestre-2-daw\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.csproj.AssemblyReference.cache
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.GeneratedMSBuildEditorConfig.editorconfig
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.AssemblyInfoInputs.cache
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.AssemblyInfo.cs
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.csproj.CoreCompileInputs.cache
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.MvcApplicationPartsAssemblyInfo.cs
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.MvcApplicationPartsAssemblyInfo.cache
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\staticwebassets.build.json
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\staticwebassets.development.json
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\staticwebassets\msbuild.back-1-trimestre-2-daw.Microsoft.AspNetCore.StaticWebAssets.props
@@ -30,4 +31,3 @@ C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\refint\back-1-trimestre-2-da
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.pdb
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.genruntimeconfig.cache
 C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\ref\back-1-trimestre-2-daw.dll
-C:\Proyects\back-1-trimestre-2-daw\obj\Debug\net8.0\back-1-trimestre-2-daw.sourcelink.json
