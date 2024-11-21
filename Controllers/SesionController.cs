@@ -60,6 +60,7 @@ namespace back_1_trimestre_2_daw.Controllers
             {
                 return NotFound($"No se encontraron salas para la película con ID {idPelicula}.");
             }
+        
 
             return Ok(salas);
         }
