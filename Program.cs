@@ -2,6 +2,16 @@ using Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirOrigenLocal", policy =>
+    {
+        policy.AllowAnyOrigin() // Permitimos cualquier origen para pruebas /////////////////////////////
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -19,6 +29,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("PermitirOrigenLocal");
 
 app.UseAuthorization();
 
