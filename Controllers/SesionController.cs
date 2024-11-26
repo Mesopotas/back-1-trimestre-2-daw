@@ -65,6 +65,26 @@ namespace back_1_trimestre_2_daw.Controllers
             return Ok(salas);
         }
 
+        [HttpGet("pelicula/{idPelicula}/salas-horarios")]
+        public ActionResult<IEnumerable<object>> GetSalasYHorariosPorPelicula(int idPelicula)
+        {
+            var sesionesPorPelicula = sesiones
+                .Where(s => s.Pelicula.Id_Pelicula == idPelicula)
+                .Select(s => new
+                {
+                    Sala = s.Sala,
+                    Horario = s.Horario
+                })
+                .ToList();
+
+            if (!sesionesPorPelicula.Any())
+            {
+                return NotFound($"No se encontraron salas ni horarios para la película con ID {idPelicula}.");
+            }
+
+            return Ok(sesionesPorPelicula);
+        }
+
         private static void InicializarSesiones()
         {
             var peliculas = PeliculaController.GetPeliculas();
@@ -74,9 +94,15 @@ namespace back_1_trimestre_2_daw.Controllers
             // Asociar películas, salas y horarios para crear sesiones
             if (peliculas.Count > 0 && salas.Count > 0 && horarios.Count > 0)
             {
-                sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[0])); // Película 1, Sala 1, Horario 1
-                sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[1])); // Película 2, Sala 2, Horario 2
-                sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[2])); // Película 3, Sala 3, Horario 3
+                sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[0]));
+                sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[1]));
+                sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[2]));
+                sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[0]));
+                sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[1]));
+                sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[2]));
+                sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[0]));
+                sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[1]));
+                sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[2]));
             }
         }
     }
