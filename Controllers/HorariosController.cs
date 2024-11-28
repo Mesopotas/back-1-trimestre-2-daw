@@ -35,9 +35,9 @@ public class HorarioController : ControllerBase
     private static void InicializarHorarios()
     {
         horarios.Add(new Horarios(1, "10:00 AM"));
-        horarios.Add(new Horarios(2, "2:00 PM"));
-        horarios.Add(new Horarios(3, "6:00 PM"));
-        horarios.Add(new Horarios(4, "9:00 PM"));
+        horarios.Add(new Horarios(2, "02:00 PM"));
+        horarios.Add(new Horarios(3, "06:00 PM"));
+        horarios.Add(new Horarios(4, "09:00 PM"));
     }
 
     public static List<Horarios> GetHorarios()
