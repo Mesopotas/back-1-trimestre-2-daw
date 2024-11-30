@@ -53,6 +53,23 @@ namespace back_1_trimestre_2_daw.Controllers
             return CreatedAtAction(nameof(GetById), new { id = nuevaSala.Id }, nuevaSala);
         }
 
+
+        [HttpPut("{id}/asientos/{numero}")]
+        public ActionResult ActualizarEstadoAsiento(int id, int numero, [FromBody] bool estaReservado)
+        {
+            var sala = salas.FirstOrDefault(s => s.Id == id);
+            if (sala == null)
+                return NotFound("Sala no encontrada");
+
+            var asiento = sala.Asientos.FirstOrDefault(a => a.Numero == numero);
+            if (asiento == null)
+                return NotFound("Asiento no encontrado");
+
+            asiento.EstaReservado = estaReservado; // Actualiza el estado del asiento
+            return NoContent(); // Respuesta de éxito sin contenido
+        }
+
+
         private static void InicializarSalas()
         {
             salas.Add(new Sala(1, "Sala 1", 100, InicializarAsientos(100)));
