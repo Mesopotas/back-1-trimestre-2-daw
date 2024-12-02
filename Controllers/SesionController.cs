@@ -85,6 +85,24 @@ namespace back_1_trimestre_2_daw.Controllers
             return Ok(sesionesPorPelicula);
         }
 
+
+        [HttpPut("{id}/asientos/{numero}")]
+        public ActionResult ActualizarEstadoAsiento(int id, int numero, [FromBody] bool estaReservado)
+        {
+            var sesion = sesiones.FirstOrDefault(s => s.Id == id);
+            if (sesion == null)
+                return NotFound("Sesión no encontrada");
+
+            var asiento = sesion.Sala.Asientos.FirstOrDefault(a => a.Numero == numero);
+            if (asiento == null)
+                return NotFound("Asiento no encontrado");
+
+            asiento.EstaReservado = estaReservado; // Actualiza el estado del asiento
+            return NoContent();
+        }
+
+
+
         private static void InicializarSesiones()
         {
             var peliculas = PeliculaController.GetPeliculas();
@@ -95,14 +113,9 @@ namespace back_1_trimestre_2_daw.Controllers
             if (peliculas.Count > 0 && salas.Count > 0 && horarios.Count > 0)
             {
                 sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[0]));
-                sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[1]));
-                sesiones.Add(new Sesion(1, peliculas[0], salas[0], horarios[2]));
-                sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[0]));
                 sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[1]));
-                sesiones.Add(new Sesion(2, peliculas[1], salas[1], horarios[2]));
-                sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[0]));
-                sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[1]));
                 sesiones.Add(new Sesion(3, peliculas[2], salas[2], horarios[2]));
+                sesiones.Add(new Sesion(4, peliculas[3], salas[3], horarios[3]));                
             }
         }
     }
